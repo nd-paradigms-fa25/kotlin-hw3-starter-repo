@@ -5,7 +5,7 @@ import edu.nd.paradigms.hw3.formats.RepresentationFormat
 class Representation(
     initialRepresentation: Map<State, Int> = mapOf()
 ): Iterable<State> {
-    private val _representation = mutableMapOf<State, Int>()
+    private val _representation = initialRepresentation.toMutableMap()
 
     /**
      * An immutable copy of the mapping of states to representative allocation

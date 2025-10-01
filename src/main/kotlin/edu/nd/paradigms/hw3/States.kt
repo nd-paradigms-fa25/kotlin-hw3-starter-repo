@@ -22,6 +22,8 @@ class States(
         if (_stateNames.contains(state.name)) {
             throw DuplicateStateNameException(state, this)
         }
+        _states.add(state)
+        _stateNames.add(state.name)
     }
 
     /**
@@ -108,6 +110,12 @@ class States(
         return remainders
     }
 
+
+
     override fun iterator() = states.iterator()
+
+    override fun toString(): String {
+        return "States(states=$states)"
+    }
 
 }
