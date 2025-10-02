@@ -5,14 +5,17 @@ import kotlin.math.floor
 class States(
     initialStates: List<State> = listOf()
 ): Iterable<State> {
-    private val _states: MutableList<State> = initialStates.toMutableList()
+    private val _statesList: MutableList<State> = initialStates.toMutableList()
     /**
      * Returns an unmodifiable view of the set of states.
      */
-    val states: List<State>
-        get() = _states
+    val statesList: List<State>
+        get() = _statesList
 
-    private val _stateNames: HashSet<String> = states.map { it.name }.toHashSet()
+
+    private val _stateNames: HashSet<String> = statesList.map { it.name }.toHashSet()
+    val statesNames: Set<String>
+        get() = _stateNames
 
     /**
      * Add a new state to the group of states
@@ -22,7 +25,7 @@ class States(
         if (_stateNames.contains(state.name)) {
             throw DuplicateStateNameException(state, this)
         }
-        _states.add(state)
+        _statesList.add(state)
         _stateNames.add(state.name)
     }
 
@@ -30,14 +33,14 @@ class States(
      * Computes the number of states in the collection.
      * @return the number of states
      */
-    val size get() = _states.size
+    val size get() = _statesList.size
 
     /**
      * Returns a set of state names in the collection.
      * @return an unmodifiable set containing the names of all states
      */
-    val isEmpty get() = _states.isEmpty()
-    val isNotEmpty get() = _states.isNotEmpty()
+    val isEmpty get() = _statesList.isEmpty()
+    val isNotEmpty get() = _statesList.isNotEmpty()
 
     /**
      * Returns the total population of the list of states
@@ -48,7 +51,7 @@ class States(
             // TODO: Replace the code below with a functional sequence
             // return _states.   ...
             var sum = 0
-            for (state in _states) {
+            for (state in _statesList) {
                 sum += state.population
             }
             return sum
@@ -72,7 +75,7 @@ class States(
         // TODO - replace the code in this method with a stream
         // return states.   ...
         val quotas = mutableMapOf<State, Double>()
-        for (state in _states) {
+        for (state in _statesList) {
             quotas[state] = state.population / divisor
         }
         return quotas
@@ -90,7 +93,7 @@ class States(
         // return quotas. OR states. (your choice - both are possible)   ...
         val roundedDownQuotas = mutableMapOf<State, Int>()
         for (state in quotas.keys) {
-            roundedDownQuotas[state] = (quotas[state]!! / divisor).toInt()
+            roundedDownQuotas[state] = quotas[state]!!.toInt()
         }
         return roundedDownQuotas
     }
@@ -112,10 +115,10 @@ class States(
 
 
 
-    override fun iterator() = states.iterator()
+    override fun iterator() = statesList.iterator()
 
     override fun toString(): String {
-        return "States(states=$states)"
+        return "States(states=$statesList)"
     }
 
 }

@@ -14,7 +14,7 @@ import kotlin.math.max
  * See sample_inputs/part1_input.csv and sample_inputs/part2_input.csv for examples
  */
 class CSVInputFile(
-    filename: String
+    val filename: String
 ): StateSource {
 
     val csvFile = File(filename)

@@ -1,8 +1,8 @@
 package edu.nd.paradigms.hw3
 
-import edu.nd.paradigms.hw3.algorithms.ApportionmentMethod
-import edu.nd.paradigms.hw3.algorithms.HamiltonMethod
-import edu.nd.paradigms.hw3.algorithms.JeffersonMethod
+import edu.nd.paradigms.hw3.algorithm.ApportionmentMethod
+import edu.nd.paradigms.hw3.algorithm.HamiltonMethod
+import edu.nd.paradigms.hw3.algorithm.JeffersonMethod
 import edu.nd.paradigms.hw3.formats.AlphabeticalFormat
 import edu.nd.paradigms.hw3.formats.DisplayOrder
 import edu.nd.paradigms.hw3.formats.PopulationFormat

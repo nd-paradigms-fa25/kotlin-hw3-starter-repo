@@ -1,6 +1,6 @@
 package edu.nd.paradigms.hw3
 
-import edu.nd.paradigms.hw3.algorithms.ApportionmentMethod
+import edu.nd.paradigms.hw3.algorithm.ApportionmentMethod
 import edu.nd.paradigms.hw3.io.StateSource
 
 class Apportionment(
