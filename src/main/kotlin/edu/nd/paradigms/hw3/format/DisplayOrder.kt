@@ -1,4 +1,4 @@
-package edu.nd.paradigms.hw3.formats
+package edu.nd.paradigms.hw3.format
 
 enum class DisplayOrder {
     ASCENDING,

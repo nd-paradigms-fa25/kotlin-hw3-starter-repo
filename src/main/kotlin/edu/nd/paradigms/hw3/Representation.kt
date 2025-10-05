@@ -1,6 +1,6 @@
 package edu.nd.paradigms.hw3
 
-import edu.nd.paradigms.hw3.formats.RepresentationFormat
+import edu.nd.paradigms.hw3.format.RepresentationFormat
 
 class Representation(
     initialRepresentation: Map<State, Int> = mapOf()

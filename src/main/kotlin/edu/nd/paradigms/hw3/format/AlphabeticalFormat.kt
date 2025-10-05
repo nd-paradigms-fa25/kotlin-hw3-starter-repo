@@ -1,4 +1,4 @@
-package edu.nd.paradigms.hw3.formats
+package edu.nd.paradigms.hw3.format
 
 import edu.nd.paradigms.hw3.Representation
 import edu.nd.paradigms.hw3.State

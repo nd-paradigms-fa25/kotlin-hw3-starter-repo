@@ -1,7 +1,7 @@
 package edu.nd.paradigms.hw3.io
 
 import edu.nd.paradigms.hw3.Representation
-import edu.nd.paradigms.hw3.formats.CSVOutputFormat
+import edu.nd.paradigms.hw3.format.CSVOutputFormat
 import java.io.FileWriter
 
 

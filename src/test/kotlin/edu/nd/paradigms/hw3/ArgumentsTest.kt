@@ -2,9 +2,9 @@ package edu.nd.paradigms.hw3
 
 import edu.nd.paradigms.hw3.algorithm.HamiltonMethod
 import edu.nd.paradigms.hw3.algorithm.JeffersonMethod
-import edu.nd.paradigms.hw3.formats.AlphabeticalFormat
-import edu.nd.paradigms.hw3.formats.DisplayOrder
-import edu.nd.paradigms.hw3.formats.PopulationFormat
+import edu.nd.paradigms.hw3.format.AlphabeticalFormat
+import edu.nd.paradigms.hw3.format.DisplayOrder
+import edu.nd.paradigms.hw3.format.PopulationFormat
 import edu.nd.paradigms.hw3.io.CSVInputFile
 import edu.nd.paradigms.hw3.io.CSVOutputFile
 import org.junit.jupiter.api.Assertions.*
