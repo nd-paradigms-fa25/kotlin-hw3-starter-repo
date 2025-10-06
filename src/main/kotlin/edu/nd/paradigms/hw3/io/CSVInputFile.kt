@@ -12,11 +12,14 @@ import kotlin.math.max
  *     <li>"Population" - the column containing the populations of each state</li>
  * </ul>
  * See sample_inputs/part1_input.csv and sample_inputs/part2_input.csv for examples
+ * @param filename the input CSV file name
+ * @throws IllegalArgumentException if filename doesn't end with ".csv" or the file doesn't exist
  */
 class CSVInputFile(
     val filename: String
 ): StateSource {
 
+    /** The CSV file */
     val csvFile = File(filename)
 
     init {
@@ -24,6 +27,7 @@ class CSVInputFile(
         require(csvFile.exists())
     }
 
+    /** The column headings for the CSV file */
     lateinit var headings: ColumnHeadings
 
     /**

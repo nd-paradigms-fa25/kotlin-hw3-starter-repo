@@ -14,7 +14,7 @@ class HamiltonMethod: ApportionmentMethod {
      * Performs an apportionment using the Hamilton method.
      * @param states the group of {@link States} to allocate representatives to
      * @param representatives the number of seats in Congress to allocate
-     * @return {@link Representation}
+     * @return {@link Representation} containing the allocation of representative to each state
      */
     override fun getRepresentation(
         states: States,
