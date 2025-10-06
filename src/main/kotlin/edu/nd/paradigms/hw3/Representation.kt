@@ -25,6 +25,9 @@ class Representation(
 
     val allocatedSeats: Int
         get() {
+            //TODO: replace with function sequence
+            // Your code should start
+            // return representation.
             var allocatedSeats = 0
             for (stateSeats in representation.values) {
                 allocatedSeats += stateSeats
